@@ -1,9 +1,12 @@
 
 describe('SigninTest',() =>{
    
-  
-
-    it('Visits sprint URL',  () => {
+    before ( () =>{
+    
+        cy.visit('https://secureeps.payrollspan.net/')
+          
+      })
+    it('Runs SignIn scenarios',  () => {
         
     cy.visit('https://secureeps.payrollspan.net/')
     cy.opensignin()
