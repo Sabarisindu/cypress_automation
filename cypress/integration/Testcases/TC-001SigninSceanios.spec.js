@@ -1,12 +1,13 @@
 
 describe('SigninTest',() =>{
    
-    before ( () =>{
-    
-        cy.visit('https://secureeps.payrollspan.net/')
-          
+    before(function () {
+        cy.fixture('example').then(function (data) {
+          this.data = data;
+        })
       })
-    it('Runs SignIn scenarios',  () => {
+    
+    it('Runs SignIn scenarios', function ()  {
         
     cy.visit('https://secureeps.payrollspan.net/')
     cy.opensignin()
@@ -15,10 +16,10 @@ describe('SigninTest',() =>{
     cy.verfiytextbox()
     cy.linktext()
     cy.pswdicon()
-    cy.pswdblank('sabarisindu.s+dec27a@w3magix.com')
+    cy.pswdblank(this.data.Email1)
     cy.wait(2000)
-    cy.invalidlogin('sabarsindu.s+dec2ddd@w3magix.com','Span@113')
-    cy.invalidpswd('sabarisindu.s+dec27a@w3magix.com','Span@112')
+    cy.invalidlogin(this.data.Email2,this.data.Password)
+    cy.invalidpswd(this.data.Email1,this.data.Password1)
     cy.popupblank()
     cy.closepopup()
     cy.wait(2000)
