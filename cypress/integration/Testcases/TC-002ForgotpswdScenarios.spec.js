@@ -16,7 +16,7 @@ describe('SigninTest',() =>{
     cy.flinktext()    
     cy.emailblank()
     cy.invalidemail(this.data.Email)
-   
+    cy.validemail(this.data.Email3)
     })
 
 })

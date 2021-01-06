@@ -63,5 +63,12 @@ Cypress.Commands.add('invalidemail',(email) =>{
   cy.get('#emailaddress').type(email)
   cy.get('.form-center > .btn > .mat-button-wrapper').click()
   cy.log('Email address is not registered with us')
+  cy.get('.close').click()
+  cy.get('#emailaddress').clear()
+  })
+Cypress.Commands.add('validemail',(email) =>{
+  cy.get('#emailaddress').type(email)
+  cy.get('.form-center > .btn > .mat-button-wrapper').click()
+  cy.log('Password reset link sent successfully')
   
 })

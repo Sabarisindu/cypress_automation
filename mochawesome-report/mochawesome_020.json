@@ -1,0 +1,104 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-01-06T15:17:36.723Z",
+    "end": "2021-01-06T15:18:19.377Z",
+    "duration": 42654,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3c4835e8-a6a1-4924-aa99-e208d6bffecd",
+      "title": "",
+      "fullFile": "cypress\\integration\\Testcases\\TC-001SigninSceanios.spec.js",
+      "file": "cypress\\integration\\Testcases\\TC-001SigninSceanios.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0d90b92f-5ede-4004-a415-aee0efd7aae8",
+          "title": "SigninTest",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Runs SignIn scenarios",
+              "fullTitle": "SigninTest Runs SignIn scenarios",
+              "timedOut": null,
+              "duration": 40501,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://secureeps.payrollspan.net/');\ncy.opensignin();\ncy.wait(2000);\ncy.verifytext();\ncy.verfiytextbox();\ncy.linktext();\ncy.pswdicon();\ncy.pswdblank(this.data.Email1);\ncy.wait(2000);\ncy.invalidlogin(this.data.Email2, this.data.Password);\ncy.invalidpswd(this.data.Email1, this.data.Password1);\ncy.popupblank();\ncy.closepopup();\ncy.wait(2000);\ncy.navigatetoSignup();\ncy.navigatetoFpswd();",
+              "err": {},
+              "uuid": "6b1ce218-8f04-4a25-8a1a-c8862cac92ba",
+              "parentUUID": "0d90b92f-5ede-4004-a415-aee0efd7aae8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6b1ce218-8f04-4a25-8a1a-c8862cac92ba"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 40501,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}
